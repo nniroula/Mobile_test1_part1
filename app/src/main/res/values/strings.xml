@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="FirstYearStudent">First Year Student</string>
+    <string name="Sophomore">Sophomore</string>
+    <string name="Junior">Junior</string>
+    <string name="Senior">Senior</string>
 </resources>
