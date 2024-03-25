@@ -8,9 +8,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.RadioButton;
 
+import com.example.myapplication.databinding.ActivityMainBinding;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
+
+    // view binding variable
+    private ActivityMainBinding binding;
 
     // declare variables
     private TextView displayRadioButton; // to display radio button value
@@ -35,19 +40,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // binding variable
+        //setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+
 
         // select a radio button on click
-        firstYearStd = findViewById(R.id.radioButtonFirst);
-        sophomore = findViewById(R.id.radioButtonSophomore);
-        junior = findViewById(R.id.radioButtonJunior);
-        senior = findViewById(R.id.radioButtonSenior);
+//        firstYearStd = findViewById(R.id.radioButtonFirst);
+//        sophomore = findViewById(R.id.radioButtonSophomore);
+//        junior = findViewById(R.id.radioButtonJunior);
+//        senior = findViewById(R.id.radioButtonSenior);
 
         // Use variable binding instead
-//        firstYearStd = binding.radioButtonFirst;
-//        sophomore = binding.radioButtonSophomore;
-//        junior = binding.radioButtonJunior;
-//        senior = binding.radioButtonSenior;
+        firstYearStd = binding.radioButtonFirst;
+        sophomore = binding.radioButtonSophomore;
+        junior = binding.radioButtonJunior;
+        senior = binding.radioButtonSenior;
 
         buttonValue = findViewById(R.id.buttonValue); // to check assigned values
     }
