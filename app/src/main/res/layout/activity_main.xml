@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="269dp"
         android:layout_height="216dp"
         android:layout_marginStart="16dp"
@@ -22,25 +23,41 @@
             android:id="@+id/radioButtonFirst"
             android:layout_width="228dp"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClick"
             android:text="@string/FirstYearStudent" />
 
         <RadioButton
             android:id="@+id/radioButtonSophomore"
             android:layout_width="229dp"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClick"
             android:text="@string/Sophomore" />
 
         <RadioButton
             android:id="@+id/radioButtonJunior"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClick"
             android:text="@string/Junior" />
 
         <RadioButton
             android:id="@+id/radioButtonSenior"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:onClick="onRadioButtonClick"
             android:text="@string/Senior" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/buttonValue"
+        android:layout_width="129dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/buttonValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

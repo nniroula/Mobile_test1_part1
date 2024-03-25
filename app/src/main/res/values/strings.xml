@@ -4,4 +4,5 @@
     <string name="Sophomore">Sophomore</string>
     <string name="Junior">Junior</string>
     <string name="Senior">Senior</string>
+    <string name="buttonValue">button value</string>
 </resources>
