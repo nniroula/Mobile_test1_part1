@@ -46,15 +46,8 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-
-        // select a radio button on click
-//        firstYearStd = findViewById(R.id.radioButtonFirst);
-//        sophomore = findViewById(R.id.radioButtonSophomore);
-//        junior = findViewById(R.id.radioButtonJunior);
-//        senior = findViewById(R.id.radioButtonSenior);
-
         // Use variable binding instead
-        firstYearStd = binding.radioButtonFirst;
+        firstYearStd = binding.radioButtonFirst;   // firstYearStd = findViewById(R.id.radioButtonFirst);
         sophomore = binding.radioButtonSophomore;
         junior = binding.radioButtonJunior;
         senior = binding.radioButtonSenior;
@@ -80,30 +73,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   // Log.i("info", selectedRadioButtonValue);
-
     // Add OnCheckedChangeListener to each radio button
 //    firstYearStd.setOnCheckedChangeListener((buttonView, isChecked) -> {
 //        if (isChecked) {
 //            classValue = 1;
-//        }
-//    });
-//
-//    radioButtonSophomore.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//        if (isChecked) {
-//            classValue = 2;
-//        }
-//    });
-//
-//    radioButtonJunior.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//        if (isChecked) {
-//            classValue = 3;
-//        }
-//    });
-//
-//    radioButtonSenior.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//        if (isChecked) {
-//            classValue = 4;
 //        }
 //    });
 
