@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.RadioButton;
@@ -14,13 +13,13 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    // view binding variable
+    /* view binding variable */
     private ActivityMainBinding binding;
 
-    // declare variables
+    /* declare variables */
     private TextView displayRadioButton; // to display radio button value
 
-   // radio buttons
+   /* radio buttons */
     private RadioButton firstYearStd;
     private RadioButton sophomore;
     private RadioButton junior;
@@ -28,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView buttonValue;
 
-    // int values
+    /* int values */
     int one = 1;
     int two = 2;
     int three = 3;
     int four = 4;
 
-    // variable to hold a selected class variable value
+    /* variable to hold a selected class variable value */
     int selectedRadioButtonValue;
 
     @Override
@@ -46,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        // Use variable binding instead
         firstYearStd = binding.radioButtonFirst;   // firstYearStd = findViewById(R.id.radioButtonFirst);
         sophomore = binding.radioButtonSophomore;
         junior = binding.radioButtonJunior;
@@ -72,12 +70,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-    // Add OnCheckedChangeListener to each radio button
-//    firstYearStd.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//        if (isChecked) {
-//            classValue = 1;
-//        }
-//    });
-
 }
