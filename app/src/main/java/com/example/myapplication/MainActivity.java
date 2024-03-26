@@ -17,7 +17,11 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     /* declare variables */
-    private TextView displayRadioButton; // to display radio button value
+    private TextView buttonValue; // just to display radio button value when clicked
+    int one = 1;
+    int two = 2;
+    int three = 3;
+    int four = 4;
 
    /* radio buttons */
     private RadioButton firstYearStd;
@@ -25,49 +29,35 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton junior;
     private RadioButton senior;
 
-    private TextView buttonValue;
-
-    /* int values */
-    int one = 1;
-    int two = 2;
-    int three = 3;
-    int four = 4;
-
     /* variable to hold a selected class variable value */
     int selectedRadioButtonValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // binding variable
-        //setContentView(R.layout.activity_main);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
 
-        firstYearStd = binding.radioButtonFirst;   // firstYearStd = findViewById(R.id.radioButtonFirst);
+        firstYearStd = binding.radioButtonFirst;
         sophomore = binding.radioButtonSophomore;
         junior = binding.radioButtonJunior;
         senior = binding.radioButtonSenior;
 
-        buttonValue = findViewById(R.id.buttonValue); // to check assigned values
+        buttonValue = findViewById(R.id.buttonValue); // use it to check assigned button values
     }
 
     public void onRadioButtonClick(View v){
+        DecimalFormat df = new DecimalFormat("0");
         if(firstYearStd.isChecked()){
             selectedRadioButtonValue = one;
-            buttonValue.setText("1");
         }else if(sophomore.isChecked()){
             selectedRadioButtonValue = two;
-            buttonValue.setText("2");
         }else if(junior.isChecked()){
             selectedRadioButtonValue = three;
-            buttonValue.setText("3");
         } else if(senior.isChecked()){
             selectedRadioButtonValue = four;
-            DecimalFormat df = new DecimalFormat("0");
-            buttonValue.setText(df.format(selectedRadioButtonValue));
         }
-
+        buttonValue.setText(df.format(selectedRadioButtonValue));
     }
 }
